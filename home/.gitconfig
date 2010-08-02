@@ -1,0 +1,12 @@
+[user]
+	name = Mark Wunsch
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[alias]
+	pretty = log --graph --pretty=format:'%C(yellow)%h %Cred%d%Creset %Cgreen%ae%Creset (%ar): %s'
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+[github]
+	user = mwunsch
