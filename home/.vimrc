@@ -34,6 +34,8 @@ set incsearch
 set ignorecase
 set smartcase
 
+set foldmethod=indent
+
 " Turn off mouse while learning Vim
 set mousehide
 set mouse=
