@@ -1,6 +1,6 @@
 [user]
 	name = Mark Wunsch
-  email = <EMAIL>
+	email = <EMAIL>
 [color]
 	branch = auto
 	diff = auto
@@ -11,4 +11,4 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [github]
 	user = mwunsch
-  token = <TOKEN>
+	token = <TOKEN>
