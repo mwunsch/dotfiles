@@ -17,7 +17,7 @@ syntax on
 if has('gui_running')
   set background=dark
   colorscheme inkpot "molokai vividchalk elflord
-  set guifont=Menlo:h16
+  set guifont=Menlo:h14
   set guioptions-=T
   " MacVim; turn off antialiasing
   "set noantialias
