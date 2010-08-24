@@ -8,6 +8,7 @@ set showmatch
 set visualbell
 set cmdheight=2
 set scrolloff=2
+set laststatus=2
 
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/tmp
@@ -47,10 +48,22 @@ nmap <leader>w :set wrap!<CR>
 nmap <leader>i :set invhls!<CR>
 " Show invisible characters
 nmap <leader>l :set list!<CR>
+
+" Opens an edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>e
+map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Opens a tab edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>t
+map <Leader>te :tabedit <C-R>=expand("%:p:h") . "/" <CR>
+
 " Use the same symbols as TextMate for tabstops and EOLs
 if &encoding == 'utf-8'
-  set listchars=tab:▸\ ,eol:¬
+  set listchars=tab:▸\ ,eol:¬,trail:·
 endif
 
-if has('autocmd')
+if has("autocmd")
+" Remember last location in file
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal g'\"" | endif
 endif
