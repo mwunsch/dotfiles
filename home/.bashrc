@@ -3,9 +3,7 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-if [ -n "$(command -v mvim)" ]; then
-  export EDITOR=mvim
-fi
+export EDITOR=vim
 
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
