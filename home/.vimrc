@@ -22,6 +22,8 @@ if has('gui_running')
   set guioptions-=T
   " MacVim; turn off antialiasing
   "set noantialias
+else
+  colorscheme elflord
 endif
 
 set backspace=indent,eol,start
