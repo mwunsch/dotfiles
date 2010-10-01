@@ -65,7 +65,20 @@ if &encoding == 'utf-8'
 endif
 
 if has("autocmd")
+
 " Remember last location in file
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+  autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
+
+" Thorfile, Rakefile and Gemfile are Ruby
+  autocmd BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,*.ru}    set ft=ruby
+
+  autocmd BufRead,BufNewFile *.md set ft=mkd
+
+" files with yaml front matter
+" http://www.codeography.com/2010/02/20/making-vim-play-nice-with-jekylls-yaml-front-matter.html
+  autocmd FileType markdown,textile syntax match Comment /\%^---\_.\{-}---$/
+
 endif
+
+
