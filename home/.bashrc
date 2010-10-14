@@ -8,8 +8,6 @@ export EDITOR=vim
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 
-export GNUTERM='x11'
-
 if [ `uname` == "Darwin" ]; then
   alias ls='ls -G'
   alias top='top -o cpu'
