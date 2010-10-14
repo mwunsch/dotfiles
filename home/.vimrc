@@ -59,6 +59,9 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Normal mode: <Leader>t
 map <Leader>te :tabedit <C-R>=expand("%:p:h") . "/" <CR>
 
+" Clears trailing whitespace
+map <Leader><Space> :%s/\s\+$//<CR>:let @/=''<CR>
+
 " Use the same symbols as TextMate for tabstops and EOLs
 if &encoding == 'utf-8'
   set listchars=tab:▸\ ,eol:¬,trail:·
