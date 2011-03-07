@@ -74,14 +74,20 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 
 " Thorfile, Rakefile and Gemfile are Ruby
-  autocmd BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,*.ru}    set ft=ruby
+  autocmd BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,*.ru} set filetype=ruby
 
-  autocmd BufRead,BufNewFile *.md set ft=mkd
+" md, markdown, and mk are markdown
+  autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set filetype=mkd
+  
+" CoffeeScript
+  autocmd BufRead,BufNewFile *.coffee set filetype=coffee
+  autocmd BufRead,BufNewFile *Cakefile set filetype=coffee
+  
+" make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
+  autocmd FileType python set tabstop=4 textwidth=79
 
 " files with yaml front matter
 " http://www.codeography.com/2010/02/20/making-vim-play-nice-with-jekylls-yaml-front-matter.html
   autocmd FileType markdown,textile syntax match Comment /\%^---\_.\{-}---$/
 
-endif
-
-
+endif 

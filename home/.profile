@@ -18,5 +18,10 @@ if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then
   PS1='\[\033[38m\]\u:\[\033[01;36m\]\w \[\033[35m\]$(__git_ps1 "(%s) ")\[\033[37m\]\$ \[\033[00m\]'
 fi
 
+# brew completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
