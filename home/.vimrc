@@ -23,7 +23,7 @@ if has('gui_running')
   " MacVim; turn off antialiasing
   "set noantialias
 else
-  colorscheme elflord
+  colorscheme desert
 endif
 
 set backspace=indent,eol,start
@@ -39,10 +39,6 @@ set smartcase
 
 set foldmethod=indent
 set nofoldenable
-
-" Turn off mouse while learning Vim
-set mousehide
-set mouse=
 
 " Wrap text
 nmap <leader>w :set wrap!<CR>
