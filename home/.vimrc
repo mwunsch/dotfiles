@@ -55,6 +55,10 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Normal mode: <Leader>t
 map <Leader>te :tabedit <C-R>=expand("%:p:h") . "/" <CR>
 
+" Opens a vertical split command with the path of the currently edited file filled in
+" Normal mode: <Leader>t
+map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
+
 " Clears trailing whitespace
 map <Leader><Space> :%s/\s\+$//<CR>:let @/=''<CR>
 
