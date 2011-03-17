@@ -7,3 +7,9 @@
 [submodule "home/.vim/bundle/vim-coffee-script"]
 	path = home/.vim/bundle/vim-coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "home/.vim/bundle/vim-surround"]
+	path = home/.vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "home/.vim/bundle/command-t"]
+	path = home/.vim/bundle/command-t
+	url = git://github.com/wincent/Command-T.git

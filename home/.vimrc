@@ -20,16 +20,7 @@ set directory=$HOME/.vim/tmp
 
 syntax on
 
-if has('gui_running')
-  set background=dark
-  colorscheme inkpot "molokai vividchalk elflord
-  set guifont=Menlo:h14
-  set guioptions-=T
-  " MacVim; turn off antialiasing
-  "set noantialias
-else
-  colorscheme desert
-endif
+colorscheme desert
 
 set backspace=indent,eol,start
 set autoindent
@@ -44,6 +35,7 @@ set smartcase
 
 set foldmethod=indent
 set nofoldenable
+
 
 " Wrap text
 nmap <leader>w :set wrap!<CR>
@@ -79,14 +71,10 @@ if has("autocmd")
     \| exe "normal g'\"" | endif
 
 " Thorfile, Rakefile and Gemfile are Ruby
-  autocmd BufRead,BufNewFile {Gemfile,Rakefile,Thorfile,*.ru} set filetype=ruby
+  autocmd BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,*.ru,*.cap} set filetype=ruby
 
 " md, markdown, and mk are markdown
   autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set filetype=mkd
-  
-" CoffeeScript
-  autocmd BufRead,BufNewFile *.coffee set filetype=coffee
-  autocmd BufRead,BufNewFile *Cakefile set filetype=coffee
   
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
   autocmd FileType python set tabstop=4 textwidth=79
