@@ -13,3 +13,6 @@
 [submodule "home/.vim/bundle/command-t"]
 	path = home/.vim/bundle/command-t
 	url = git://github.com/wincent/Command-T.git
+[submodule "home/.vim/bundle/color-sampler"]
+	path = home/.vim/bundle/color-sampler
+	url = https://github.com/vim-scripts/Color-Sampler-Pack
