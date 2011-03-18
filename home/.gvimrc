@@ -1,7 +1,7 @@
 if has("gui_macvim")
   set guioptions-=T
   set guifont=Menlo:h13
-  colorscheme habilight
+  colorscheme jellybeans "habilight
 
   "Command-T
   macmenu &File.New\ Tab key=<nop>
