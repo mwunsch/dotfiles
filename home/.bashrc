@@ -8,6 +8,19 @@ export EDITOR=vim
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 
+# git completion
+if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then
+  source '/usr/local/etc/bash_completion.d/git-completion.bash'
+fi
+
+# brew completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+# rvm completion
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+
 if [ `uname` == "Darwin" ]; then
   alias ls='ls -G'
   alias top='top -o cpu'

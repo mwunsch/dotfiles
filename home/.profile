@@ -12,19 +12,7 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# git completion
-if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then
-  source '/usr/local/etc/bash_completion.d/git-completion.bash'
-  PS1='\[\033[38m\]\u:\[\033[01;36m\]\w \[\033[35m\]$(__git_ps1 "(%s) ")\[\033[37m\]\$ \[\033[00m\]'
-fi
-
-# brew completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# rvm completion
-[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-
+PS1='\[\033[0;31m\]$($rvm_path/bin/rvm-prompt u g s)\[\033[00m\] \[\033[38m\]\u:\[\033[01;36m\]\w \[\033[35m\]$(__git_ps1 "(%s) ")\[\033[37m\]\$ \[\033[00m\]'
