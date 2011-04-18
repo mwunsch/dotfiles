@@ -4,7 +4,7 @@ if has("gui_macvim")
   colorscheme jellybeans "habilight
 
   "Command-T
-  macmenu &File.New\ Tab key=<nop>
+  macmenu &File.New\ Tab key=<D-T>
   map <D-t> :CommandT<CR>
   imap <D-t> <Esc>:CommandT<CR>
 
