@@ -1,0 +1,6 @@
+altscreen on
+autodetach on
+defutf8 on
+hardstatus alwayslastline
+hardstatus string '%{= kg}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r} (%{W}%n %f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %D %M %d, %Y %{W}%c %{g}]'
+startup_message off
