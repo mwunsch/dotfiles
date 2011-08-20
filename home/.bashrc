@@ -1,42 +1,36 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 # If not running interactively, don't do anything
-if [[ -n "$PS1" ]] ; then
+[ -z "$PS1" ] && return
 
-  export EDITOR=vim
+export EDITOR=vim
 
-  export GREP_OPTIONS='--color=auto'
-  export GREP_COLOR='1;33'
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;33'
 
-  # git completion
-  if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then
-    source '/usr/local/etc/bash_completion.d/git-completion.bash'
-  fi
-
-  # brew completion
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-  fi
-
-  # rvm completion
-  [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-
-  if [ `uname` == "Darwin" ]; then
-    alias ls='ls -G'
-    alias top='top -o cpu'
-    alias quicklook='qlmanage -p 2>/dev/null'
-    function pman() { man -t $@ | open -f -a /Applications/Preview.app; }
-  else
-    alias ls='ls --color=auto'
-  fi
-
-  alias git=hub
-
-  alias apachestart='sudo apachectl start'
-  alias apachestop='sudo apachectl stop'
-  alias mongostart='mongod --config `brew --cellar mongodb`/1.8.1-x86_64/mongod.conf'
-
-  PS1='\[\033[0;38m\]\u:\[\033[0;36m\]\w \[\033[0;35m\]$(__git_ps1 "(%s) ")\[\033[0;37m\]\$ \[\033[00m\]'
+# git completion
+if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then
+  source '/usr/local/etc/bash_completion.d/git-completion.bash'
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# brew completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+if [ `uname` == "Darwin" ]; then
+  alias ls='ls -G'
+  alias top='top -o cpu'
+  alias quicklook='qlmanage -p 2>/dev/null'
+  function pman() { man -t $@ | open -f -a /Applications/Preview.app; }
+else
+  alias ls='ls --color=auto'
+fi
+
+alias git=hub
+
+alias apachestart='sudo apachectl start'
+alias apachestop='sudo apachectl stop'
+alias mongostart='mongod --config `brew --cellar mongodb`/1.8.1-x86_64/mongod.conf'
+
+PS1='\[\033[0;38m\]\u:\[\033[0;36m\]\w \[\033[0;35m\]$(__git_ps1 "(%s) ")\[\033[0;37m\]\$ \[\033[00m\]'
