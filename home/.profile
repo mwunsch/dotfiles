@@ -2,7 +2,7 @@
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists.
 
-PATH="$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
