@@ -22,3 +22,6 @@
 [submodule "Sublime Text 2/tumblr-themes.tmbundle"]
 	path = Sublime Text 2/tumblr-themes.tmbundle
 	url = https://github.com/bengold/tumblr-themes.tmbundle.git
+[submodule "Sublime Text 2/Scalate.tmbundle"]
+	path = Sublime Text 2/Scalate.tmbundle
+	url = https://github.com/scalate/Scalate.tmbundle
