@@ -2,7 +2,6 @@ if has("gui_macvim")
   set guioptions-=T
   set guifont=Menlo:h14
   set background=light
-  colorscheme solarized "jellybeans
 
   "Command-T
   macmenu &File.New\ Tab key=<D-T>
