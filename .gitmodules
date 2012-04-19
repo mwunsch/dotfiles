@@ -22,6 +22,3 @@
 [submodule "Sublime Text 2/Scalate.tmbundle"]
 	path = Sublime Text 2/Scalate.tmbundle
 	url = https://github.com/scalate/Scalate.tmbundle
-[submodule "home/.vim/bundle/ctrlp.vim"]
-	path = home/.vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
