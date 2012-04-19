@@ -73,6 +73,9 @@ if has("autocmd")
 " Thorfile, Rakefile and Gemfile are Ruby
   autocmd BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,*.ru,*.cap} set filetype=ruby
 
+" sbt
+  autocmd BufRead,BufNewFile {*.sbt} set filetype=scala
+
 " md, markdown, and mk are markdown
   autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set filetype=mkd
   
