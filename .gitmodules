@@ -16,9 +16,3 @@
 [submodule "home/.vim/bundle/vim-colors-solarized"]
 	path = home/.vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "Sublime Text 2/tumblr-themes.tmbundle"]
-	path = Sublime Text 2/tumblr-themes.tmbundle
-	url = https://github.com/bengold/tumblr-themes.tmbundle.git
-[submodule "Sublime Text 2/Scalate.tmbundle"]
-	path = Sublime Text 2/Scalate.tmbundle
-	url = https://github.com/scalate/Scalate.tmbundle
