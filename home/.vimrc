@@ -1,8 +1,8 @@
 set nocompatible
 
 " https://github.com/tpope/vim-pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 filetype plugin indent on
 
