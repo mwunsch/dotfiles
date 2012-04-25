@@ -20,7 +20,7 @@ set directory=$HOME/.vim/tmp
 
 syntax on
 
-colorscheme jellybeans
+colorscheme desert
 
 set backspace=indent,eol,start
 set autoindent
