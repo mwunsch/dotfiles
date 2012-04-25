@@ -1,7 +1,7 @@
 if has("gui_macvim")
   set guioptions-=T
   set guifont=Menlo:h16
-  colorscheme solarized
+  colorscheme Tomorrow-Night-Eighties
 
   "Command-T
   macmenu &File.New\ Tab key=<D-T>
