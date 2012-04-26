@@ -75,9 +75,6 @@ if has("autocmd")
 
 " sbt
   autocmd BufRead,BufNewFile {*.sbt} set filetype=scala
-
-" md, markdown, and mk are markdown
-"  autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} set filetype=mkd
   
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
   autocmd FileType python set tabstop=4 textwidth=79
