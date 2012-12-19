@@ -10,9 +10,6 @@
 [submodule "home/.vim/bundle/vim-surround"]
 	path = home/.vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "home/.vim/bundle/color-sampler"]
-	path = home/.vim/bundle/color-sampler
-	url = https://github.com/vim-scripts/Color-Sampler-Pack
 [submodule "home/.vim/bundle/vim-colors-solarized"]
 	path = home/.vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
@@ -40,3 +37,6 @@
 [submodule "home/.vim/bundle/vim-handlebars"]
 	path = home/.vim/bundle/vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
+[submodule "home/.vim/bundle/colour-sampler-pack"]
+	path = home/.vim/bundle/colour-sampler-pack
+	url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
