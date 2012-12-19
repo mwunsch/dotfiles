@@ -20,7 +20,7 @@ set directory=$HOME/.vim/tmp
 
 syntax on
 
-colorscheme desert
+colorscheme Tomorrow-Night
 
 set backspace=indent,eol,start
 set autoindent
