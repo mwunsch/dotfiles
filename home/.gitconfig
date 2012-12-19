@@ -1,6 +1,6 @@
 [user]
 	name = Mark Wunsch
-	email = <EMAIL>
+	email = mark@markwunsch.com
 [color]
 	branch = auto
 	diff = auto
@@ -10,6 +10,8 @@
 	pretty = log --graph --oneline --decorate
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	stat = status -sb
+  board = shortlog -sn
 [github]
 	user = mwunsch
-	token = <TOKEN>
+[core]
+	excludesfile = ~/.gitignore
