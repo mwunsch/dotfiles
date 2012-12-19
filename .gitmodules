@@ -31,9 +31,6 @@
 [submodule "home/.vim/bundle/vim-tomorrow-theme"]
 	path = home/.vim/bundle/vim-tomorrow-theme
 	url = https://github.com/chriskempson/vim-tomorrow-theme.git
-[submodule "home/.vim/bundle/vim-github-colorscheme"]
-	path = home/.vim/bundle/vim-github-colorscheme
-	url = https://github.com/endel/vim-github-colorscheme.git
 [submodule "home/.vim/bundle/vim-less"]
 	path = home/.vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
