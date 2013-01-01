@@ -38,3 +38,6 @@ alias apachestop='sudo apachectl stop'
 alias mongostart='mongod --config `brew --cellar mongodb`/1.8.1-x86_64/mongod.conf'
 
 PS1='\[\033[0;38m\]\u:\[\033[0;36m\]\w \[\033[0;35m\]$(__git_ps1 "(%s) ")\[\033[0;37m\]\$ \[\033[00m\]'
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
