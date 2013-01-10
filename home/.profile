@@ -12,4 +12,4 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
