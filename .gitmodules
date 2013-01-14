@@ -49,3 +49,12 @@
 [submodule "home/.vim/bundle/vim-haml"]
 	path = home/.vim/bundle/vim-haml
 	url = https://github.com/tpope/vim-haml.git
+[submodule "home/.vim/bundle/hemisu"]
+	path = home/.vim/bundle/hemisu
+	url = https://github.com/noahfrederick/Hemisu.git
+[submodule "home/.vim/bundle/Muon"]
+	path = home/.vim/bundle/Muon
+	url = https://github.com/gregsexton/Muon.git
+[submodule "home/.vim/bundle/vim-commentary"]
+	path = home/.vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
