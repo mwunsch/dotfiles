@@ -34,9 +34,6 @@
 [submodule "home/.vim/bundle/vim-handlebars"]
 	path = home/.vim/bundle/vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
-[submodule "home/.vim/bundle/colour-sampler-pack"]
-	path = home/.vim/bundle/colour-sampler-pack
-	url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
 [submodule "home/.vim/bundle/ctrlp"]
 	path = home/.vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git

@@ -21,7 +21,7 @@ set directory=$HOME/.vim/tmp
 
 syntax on
 
-colorscheme Tomorrow-Night
+colorscheme solarized
 
 set backspace=indent,eol,start
 set autoindent
