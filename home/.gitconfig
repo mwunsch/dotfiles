@@ -15,3 +15,5 @@
 	user = mwunsch
 [core]
 	excludesfile = ~/.gitignore
+[push]
+	default = current
