@@ -4,22 +4,21 @@
 [ -z "$PS1" ] && return
 
 export EDITOR=vim
-
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 
 # git completion
-if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then
-  source '/usr/local/etc/bash_completion.d/git-completion.bash'
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 fi
 
-if [ -f '/usr/local/etc/bash_completion.d/git-prompt.sh' ]; then
-  source '/usr/local/etc/bash_completion.d/git-prompt.sh'
+if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
+  source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
 fi
 
 # brew completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+  source `brew --prefix`/etc/bash_completion
 fi
 
 if [ `uname` == "Darwin" ]; then
@@ -30,6 +29,11 @@ if [ `uname` == "Darwin" ]; then
 else
   alias ls='ls --color=auto'
 fi
+
+if [ `command -v mvim` ]; then
+  alias vim='mvim -v'
+fi
+
 
 alias git=hub
 
