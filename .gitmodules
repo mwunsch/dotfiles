@@ -67,3 +67,6 @@
 [submodule "home/.vim/bundle/typescript-vim"]
 	path = home/.vim/bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "home/.vim/bundle/vim-golang"]
+	path = home/.vim/bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang.git
