@@ -34,6 +34,10 @@ if [ `command -v mvim` ]; then
   alias vim='mvim -v'
 fi
 
+if [[ -d "$HOME/Go" && `command -v go` ]]; then
+  export GOPATH="$HOME/Go"
+fi
+
 
 alias git=hub
 
