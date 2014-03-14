@@ -73,3 +73,9 @@
 [submodule "home/.vim/bundle/vim-io"]
 	path = home/.vim/bundle/vim-io
 	url = https://github.com/xhr/vim-io
+[submodule "home/.vim/bundle/vim-liquid"]
+	path = home/.vim/bundle/vim-liquid
+	url = https://github.com/tpope/vim-liquid.git
+[submodule "home/.vim/bundle/rust.vim"]
+	path = home/.vim/bundle/rust.vim
+	url = https://github.com/wting/rust.vim.git

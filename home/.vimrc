@@ -22,6 +22,7 @@ set directory=$HOME/.vim/tmp
 syntax on
 
 colorscheme solarized
+set background=dark
 
 set backspace=indent,eol,start
 set autoindent
@@ -82,6 +83,6 @@ if has("autocmd")
 
 " files with yaml front matter
 " http://www.codeography.com/2010/02/20/making-vim-play-nice-with-jekylls-yaml-front-matter.html
-  autocmd FileType markdown,textile syntax match Comment /\%^---\_.\{-}---$/
+  " autocmd FileType markdown,textile syntax match Comment /\%^---\_.\{-}---$/
 
 endif 
