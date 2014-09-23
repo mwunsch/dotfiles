@@ -46,7 +46,7 @@ alias apachestop='sudo apachectl stop'
 alias mongostart='mongod --config `brew --cellar mongodb`/1.8.1-x86_64/mongod.conf'
 
 alias mit-license='curl -fsSL http://git.io/license | sh'
-function puthtml() { curl -F "file=@${1:--;filename=`uuidgen`.html}" -F "api_key=${2:-$PUTHTML_API_KEY}" http://www.puthtml.com/; }
+function puthtml() { curl -F "file=@${1:--};filename=${1:-`uuidgen`.html}" -F "api_key=${2:-$PUTHTML_API_KEY}" http://www.puthtml.com/; }
 function lookbusy() { cat /dev/urandom | od -An; }
 
 PS1='\[\033[0;38m\]\u:\[\033[0;36m\]\w \[\033[0;35m\]$(__git_ps1 "(%s) ")\[\033[1;36m\]\$ \[\033[00m\]'
