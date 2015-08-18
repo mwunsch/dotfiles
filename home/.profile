@@ -2,6 +2,8 @@
 # This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
 # exists.
 
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists

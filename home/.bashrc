@@ -3,8 +3,6 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
 export EDITOR=vim
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
