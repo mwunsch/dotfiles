@@ -8,17 +8,17 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 
 # git completion
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-  source `brew --prefix`/etc/bash_completion.d/git-completion.bash
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+  source /usr/local/etc/bash_completion.d/git-completion.bash
 fi
 
-if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
-  source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+if [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ]; then
+  source /usr/local/etc/bash_completion.d/git-prompt.sh
 fi
 
 # brew completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  source `brew --prefix`/etc/bash_completion
+if [ -f /usr/local/etc/bash_completion ]; then
+  source /usr/local/etc/bash_completion
 fi
 
 if [ `uname` == "Darwin" ]; then
@@ -26,8 +26,6 @@ if [ `uname` == "Darwin" ]; then
   alias top='top -o cpu'
   alias quicklook='qlmanage -p 2>/dev/null'
   function pman() { man -t $@ | open -f -a /Applications/Preview.app; }
-else
-  alias ls='ls --color=auto'
 fi
 
 if [ `command -v mvim` ]; then
@@ -39,7 +37,9 @@ if [[ -d "$HOME/Go" && `command -v go` ]]; then
 fi
 
 
-alias git=hub
+if [[ `command -v hub` ]]; then
+  alias git=hub
+fi
 
 alias apachestart='sudo apachectl start'
 alias apachestop='sudo apachectl stop'
