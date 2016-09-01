@@ -4,6 +4,7 @@
 [ -z "$PS1" ] && return
 
 export EDITOR=vim
+export PAGER=less
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 
