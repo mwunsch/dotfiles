@@ -50,6 +50,15 @@ alias mit-license='curl -fsSL http://git.io/license | sh'
 function puthtml() { curl -F "file=@${1:--};filename=${1:-`uuidgen`.html}" -F "api_key=${2:-$PUTHTML_API_KEY}" http://www.puthtml.com/; }
 function lookbusy() { cat /dev/urandom | od -An; }
 
+function c99sh() {
+    # just a little hacky script to run a C program from Standard
+    # Input. Inspired by the book *21st Century C*. For something more
+    # robust see: https://github.com/RhysU/c99sh
+    tmpfile=`mktemp`
+    trap "rm -f $tmpfile" EXIT
+    cc -xc - -g -Wall -O3 -o "$tmpfile" -include stdio.h $@ && $tmpfile
+}
+
 PS1='\[\033[0;38m\]\u:\[\033[0;36m\]\w \[\033[0;35m\]$(__git_ps1 "(%s) ")\[\033[1;36m\]\$ \[\033[00m\]'
 
 ### Added by the Heroku Toolbelt
