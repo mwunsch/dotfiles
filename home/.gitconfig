@@ -16,7 +16,7 @@
 [github]
 	user = mwunsch
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 [push]
 	default = current
 [filter "media"]
