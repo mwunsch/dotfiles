@@ -42,6 +42,8 @@ if [[ `command -v hub` ]]; then
   alias git=hub
 fi
 
+alias yesterday='date -r $((`date +%s` - 86400))'
+
 alias apachestart='sudo apachectl start'
 alias apachestop='sudo apachectl stop'
 alias mongostart='mongod --config `brew --cellar mongodb`/1.8.1-x86_64/mongod.conf'
