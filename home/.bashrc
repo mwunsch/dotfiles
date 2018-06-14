@@ -26,6 +26,7 @@ if [ `uname` == "Darwin" ]; then
   alias ls='ls -G'
   alias top='top -o cpu'
   alias quicklook='qlmanage -p 2>/dev/null'
+  alias yesterday='date -r $((`date +%s` - 86400))'
   function pman() { man -t $@ | open -f -a /Applications/Preview.app; }
 fi
 
@@ -37,16 +38,9 @@ if [[ -d "$HOME/Go" && `command -v go` ]]; then
   export GOPATH="$HOME/Go"
 fi
 
-
 if [[ `command -v hub` ]]; then
   alias git=hub
 fi
-
-alias yesterday='date -r $((`date +%s` - 86400))'
-
-alias apachestart='sudo apachectl start'
-alias apachestop='sudo apachectl stop'
-alias mongostart='mongod --config `brew --cellar mongodb`/1.8.1-x86_64/mongod.conf'
 
 alias mit-license='curl -fsSL http://git.io/license | sh'
 function puthtml() { curl -F "file=@${1:--};filename=${1:-`uuidgen`.html}" -F "api_key=${2:-$PUTHTML_API_KEY}" http://www.puthtml.com/; }
