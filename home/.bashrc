@@ -34,6 +34,11 @@ if [ `command -v mvim` ]; then
   alias vim='mvim -v'
 fi
 
+if [[ `command -v xxd` ]]; then
+  function hexchar() { printf "\\\x%s" $(printf $1|xxd -p -c1 -u); }
+  function unichr() { perl -C -e "print chr $1"; }
+fi
+
 if [[ -d "$HOME/Go" && `command -v go` ]]; then
   export GOPATH="$HOME/Go"
 fi
