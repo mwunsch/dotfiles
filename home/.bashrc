@@ -39,6 +39,13 @@ if [[ `command -v xxd` ]]; then
   function unichr() { perl -C -e "print chr $1"; }
 fi
 
+function char437() {
+  # echo -e $(printf '\\x%02x' $(seq 1 31)) | cp437
+  perl -CS -p -e 'tr/\x7f\x01-\x1f/\x{2302}\x{263a}\x{263b}\x{2665}\x{26}\x{2663}\x{2660}\x{2022}\x{25d8}\x{25cb}\x{25d9}\x{2642}\x{2640}\x{266a}\x{266b}\x{263c}\x{25ba}\x{25c4}\x{2195}\x{203c}\x{00b6}\x{00a7}\x{25ac}\x{21a8}\x{2191}\x{2193}\x{2192}\x{2190}\x{221f}\x{2194}\x{25b2}\x{25bc}/';
+}
+
+alias cp437='iconv -f cp437'
+
 if [[ -d "$HOME/Go" && `command -v go` ]]; then
   export GOPATH="$HOME/Go"
 fi
