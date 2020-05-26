@@ -12,4 +12,8 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+# Quiets macOS Catalina's zsh warning
+# https://support.apple.com/kb/HT208050
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
