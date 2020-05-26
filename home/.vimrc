@@ -1,10 +1,5 @@
 set nocompatible
 
-" https://github.com/tpope/vim-pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
-
 filetype plugin indent on
 
 set number
